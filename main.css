@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Tahoma, Arial;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.content-img {
+  width: 50%;
+  height: 60%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.left,
+.right {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  padding: 10px;
+  font-size: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 10px;
+  background-color: aliceblue;
+  z-index: 20;
+}
+.right {
+  right: 10px;
+}
+.center {
+  width: 100%;
+  height: 100%;
+  transition: 0.6s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.images {
+  position: absolute;
+  transition: 0.6s;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+.active {
+  opacity: 1;
+}
+.content-point {
+  width: 90vw;
+  height: 40px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.all {
+  width: 15px;
+  height: 15px;
+  padding: 5px;
+  margin: 0 10px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #000;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.dotted {
+  transition: 0.5s;
+}
+.dotted::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+.dotted:hover.all {
+  transform: scale(1.1);
+}
+@media (max-width: 1333px) {
+  .content-img {
+    width: 70%;
+  }
+}
+@media (max-width: 900px) {
+  .content-img {
+    width: 85%;
+  }
+}
+@media (max-width: 555px) {
+  .content-img {
+    width: 85%;
+    height: 50%;
+  }
+}
+@media (max-width: 350px) {
+  .content-img {
+    width: 78%;
+    height: 40%;
+  }
+}
